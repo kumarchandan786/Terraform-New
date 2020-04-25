@@ -1,5 +1,5 @@
 This is about variables
- How to assign Variables in terraform for against Don't Repeat of your self
+ How to assign Variables in terraform for aggainst of Don't Repeat of your self
 1. Create any variable file with extension .tf
   syntax:  variable "Name_of_the_Vars" {
                    [Config....]
