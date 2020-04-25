@@ -1,0 +1,37 @@
+This is about variables
+ How to assign Variables in terraform for against Don't Repeat of your self
+1. Create any variable file with extension .tf
+  syntax:  variable "Name_of_the_Vars" {
+                   [Config....]
+                }
+  => Config Block is an optional
+     This Block Contain listed keywords
+          a. description :- Give some story for human understanding
+          b. default :- There are Numbers of way to provides the value for the variables
+                 1.Run time using (--var) option
+                 2. Through the file (using the -var-file)
+                 3.Via the Environment Variables  (TF_VAR_<Variables_Name>)
+            If the no value is passed then It will take default one.
+          c. Type :- It may may be string, List, Map(Dictionary)
+                   terraform will assume the type value is "default" one.
+                    If there is no default value then terraform will be assume that value is string
+
+          1. Example:-
+             variable "List_example"{
+              description "An Example of a list in terraform "
+              type = "list"
+              default = [1,2,3]
+              }
+          2. Example Map:-
+             variable "Map_example"{
+             description "Here Example of MAP"
+             type = "map"
+             default = {
+                key1 = "value1"
+                key2 = "value2"
+                key3 = "value3"
+              }
+            }
+
+2. How to access these variable value from the variables section
+    "${var.Variables_Name}" or var.Variables_Name    
