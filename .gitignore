@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 .terraform
 *.tfstate 
 
+=======
+*.terraform
+.tfstate
+>>>>>>> ignore
